@@ -1,0 +1,22 @@
+{
+  "name": "service-2",
+  "version": "1.0.0",
+  "scripts": {
+    "npm": "npm i",
+    "build:routes": "mkdir -p src-api/routes && tsoa routes",
+    "build:swagger": "mkdir -p api && mkdir -p api/dist && tsoa swagger",
+    "build:ts": "tsc -p src-api",
+    "build:all": "npm run build:routes && npm run build:swagger && npm run build:ts && npm run build:web",
+    "start": "node dist/main.js"
+  },
+  "dependencies": {
+    "@bithighlander/default-redis": "^5.8.0",
+    "@bithighlander/loggerdog-client": "^5.8.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "rate-limiter-flexible": "^2.1.7",
+    "swagger-ui-express": "^4.1.4",
+    "tsoa": "^3.2.1"
+  }
+}
