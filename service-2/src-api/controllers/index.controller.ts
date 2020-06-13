@@ -6,8 +6,8 @@
 let TAG = ' | API | '
 
 const pjson = require('../../package.json');
-const log = require('@bithighlander/pioneer-loggerdog-client')()
-const {subscriber, publisher, redis} = require('@bithighlander/pioneer-default-redis')
+const log = require('@bithighlander/loggerdog-client')()
+const {subscriber, publisher, redis} = require('@bithighlander/default-redis')
 
 
 //rest-ts

@@ -10,7 +10,7 @@ const pjson = require('../package.json');
 const TAG = " | "+ pjson.name +" | "
 const log = require('@bithighlander/loggerdog-client')()
 const {subscriber, publisher, redis} = require('@bithighlander/default-redis')
-var cors = require('cors')
+const cors = require('cors')
 import * as bodyParser from 'body-parser';
 import * as express from 'express';
 import * as methodOverride from 'method-override';
@@ -25,7 +25,7 @@ const { RateLimiterRedis } = require('rate-limiter-flexible');
 
 const app = express();
 const server = require('http').Server(app);
-let API_PORT = parseInt(process.env["API_PORT_PIONEER"]) || 8000
+let API_PORT = parseInt(process.env["API_PORT_PIONEER"]) || 4001
 let RATE_LIMIT_RPM = parseInt(process.env["RATE_LIMIT_TPS"]) || 5
 
 //limiter

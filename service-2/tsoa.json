@@ -1,5 +1,14 @@
 {
-  "swagger": {
+  "entryFile": "./src-api/main.ts",
+  "host": "127.0.0.1:4001",
+  "schemes": ["http","ws"],
+  "basePath": "/api/v1",
+  "specVersion": 3,
+  "outputDirectory": "./api/dist",
+  "controllerPathGlobs": [
+    "./src-api/controllers/**/*controller.ts"
+  ],
+  "spec": {
     "host": "127.0.0.1:4001",
     "schemes": ["http","ws"],
     "basePath": "/api/v1",
