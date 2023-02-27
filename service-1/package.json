@@ -15,6 +15,7 @@
     "@bithighlander/loggerdog-client": "^5.8.0",
     "@types/node": "^12.12.44",
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "method-override": "^3.0.0",
     "rate-limiter-flexible": "^2.1.7",

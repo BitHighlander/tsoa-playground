@@ -43,8 +43,6 @@ export class IndexController extends Controller {
 
     /*
         Health endpoint
-
-
     */
 
     @Get('/health')
@@ -59,6 +57,36 @@ export class IndexController extends Controller {
                 name:pjson.name,
                 version:pjson.version,
                 system:status
+            }
+
+            return(output)
+        }catch(e){
+            let errorResp:Error = {
+                success:false,
+                tag,
+                e
+            }
+            log.error(tag,"e: ",{errorResp})
+            throw new ApiError("error",503,"error: "+e.toString());
+        }
+    }
+
+    /*
+        status endpoint
+
+    */
+
+    @Get('/status')
+    public async status() {
+        let tag = TAG + " | status | "
+        try{
+
+            let output:any = {
+                billacceptor:"online",
+                hotwallet:"online",
+                balanceUSD: 23000,
+                balanceLUSD: 29000,
+                rate: 23000 / 29000
             }
 
             return(output)
